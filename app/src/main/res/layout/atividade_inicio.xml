@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--View Group que organiza as views interiores em relação a outras views ou a view Pai (View Raiz) -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".AtividadeInicio">
+
+    <!--view para inserir imagem-->
+    <!-- Atributo Principal -->
+    <!-- src : define onde está a imagem (diretório da imagem na pasta drawable)-->
+    <ImageView
+        android:layout_width="500dp"
+        android:src="@drawable/logo_flisol"
+        android:layout_above="@id/titulo_do_app"
+        android:layout_height="500dp" />
+
+    <!--View para colocar textos-->
+    <!-- Atributos Principais -->
+    <!-- text : define o texto da view -->
+    <!-- textColor : define a cor do texto -->
+    <!-- textSize : define o tamanho do text -->
+    <!-- textStyle : define o estilo do texto (italico, negrito, etc)  -->
+    <TextView
+        android:id="@+id/titulo_do_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textColor="#FF9933"
+        android:text="Placar de Basquete FLISOL"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <!--View Botão que ao acionado inicia o placar -->
+    <!-- Atributos Principais -->
+    <!-- onClick : define o metodo que sera executado ao clicar no botao -->
+    <!-- backgroundTint : define a cor do fundo do botao -->
+    <Button
+        android:id="@+id/botao_comecar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titulo_do_app"
+        android:layout_centerHorizontal="true"
+        android:onClick="iniciar"
+        android:backgroundTint="#0F7EE2"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="Iniciar" />
+
+</RelativeLayout>
